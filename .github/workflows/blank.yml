@@ -47,4 +47,4 @@ jobs:
       - name: Test
         run: pytest
       - name: Flake
-        run : flake8 utils.py
+        run : flake8 --exclude env
