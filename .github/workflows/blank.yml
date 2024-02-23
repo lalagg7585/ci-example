@@ -46,3 +46,5 @@ jobs:
               pip install -r requirements.txt
       - name: Test
         run: pytest
+      - name: Flake
+        run : flake8 utils.py
