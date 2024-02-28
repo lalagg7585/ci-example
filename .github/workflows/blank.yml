@@ -57,7 +57,7 @@ jobs:
           aws-region: us-east-1
       - name: List buckets
         run: aws s3 ls
-      - name: upload .ṕy files to s3
+      - name: upload .py files to s3
         run: |
-         find . -name "*.py" -type f -exce aws s3 cp {} s3://bigdatasubir7585/code/ \;
+         find . -name "*.py" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
          find . -name "*.txt" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
