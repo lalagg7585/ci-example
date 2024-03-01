@@ -14,7 +14,7 @@
         "events": [
             {
                 "function": "tiempo.py",
-                "expression": "cron(30 4 * * ? *)"  // Ejecutar todos los días a las 8:00 UTC
+                "expression": "cron(30 04 * * ? *)"  // Ejecutar todos los días a las 8:00 UTC
             }
         ]
     }
