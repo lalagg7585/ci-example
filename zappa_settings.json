@@ -1,0 +1,21 @@
+{
+    "dev": {
+        "app_function": "tiempo.lambda_handler",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "ci-example",
+        "runtime": "python3.9",
+        "s3_bucket": "zappa-taller",
+        "apigateway_enabled": false,
+        "manage_roles": false,
+        "role_name": "robomaker_students",
+        "keep_warm": false,
+        "role_name": "LabRole",
+        "events": [
+            {
+                "function": "tiempo.py",
+                "expression": "cron(30 4 * * ? *)"  // Ejecutar todos los días a las 8:00 UTC
+            }
+        ]
+    }
+}
