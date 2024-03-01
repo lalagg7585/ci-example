@@ -68,5 +68,4 @@ jobs:
 
       - name: Deploy with Zappa
         run: |
-          pip install zappa
           zappa deploy dev  # Ajusta al entorno que estás usando en Zappa
