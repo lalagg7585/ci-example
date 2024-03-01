@@ -57,10 +57,10 @@ jobs:
           aws-region: us-east-1
       - name: List buckets
         run: aws s3 ls
-      - name: upload .py files to s3
-        run: |
-         find . -name "*.py" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
-         find . -name "*.txt" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
+      #- name: upload .py files to s3
+      #  run: |
+      #   find . -name "*.py" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
+      #   find . -name "*.txt" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
 
       - name: Deploy with Zappa
         run: |
