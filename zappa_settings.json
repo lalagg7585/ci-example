@@ -13,7 +13,7 @@
         "role_name": "LabRole",
         "events": [
             {
-                "function": "tiempo.py",
+                "function": "tiempo.lambda_handle",
                 "expression": "cron(30 04 * * ? *)"  // Ejecutar todos los días a las 8:00 UTC
             }
         ]
