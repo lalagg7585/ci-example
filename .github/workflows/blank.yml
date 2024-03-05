@@ -61,7 +61,8 @@ jobs:
       #  run: |
       #   find . -name "*.py" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
       #   find . -name "*.txt" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
-
+      - name: enviroment
+        run: source myenv/bin/activate
       - name: Deploy with Zappa
         run: |
           pip install zappa
