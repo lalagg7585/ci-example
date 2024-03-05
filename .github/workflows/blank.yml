@@ -63,7 +63,7 @@ jobs:
       #   find . -name "*.txt" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
       - name: enviroment
         run: |
-          python -m venv myenv
+          python3.9 -m venv myenv
           source myenv/bin/activate
       - name: Deploy with Zappa
         run: |
