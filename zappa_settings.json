@@ -2,7 +2,6 @@
     "dev": {
         "app_function": "tiempo.lambda_handler",
         "aws_region": "us-east-1",
-        "profile_name": "default",
         "project_name": "ci-example",
         "runtime": "python3.9",
         "s3_bucket": "zappa-taller",
