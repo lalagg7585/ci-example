@@ -77,4 +77,3 @@ jobs:
           source env/bin/activate
           pip install zappa
           zappa update dev
-          zappa invoke tiempo.lambda_handler
