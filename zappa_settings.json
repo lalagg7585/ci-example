@@ -13,7 +13,7 @@
         "events": [
             {
                 "function": "tiempo.lambda_handle",
-                "expression": "cron(06 1 * * ? *)"  // Ejecutar todos los días a las 8:00 UTC
+                "expression": "cron(10 01 * * ? *)"  // Ejecutar todos los días a las 8:00 UTC
             }
         ]
     }

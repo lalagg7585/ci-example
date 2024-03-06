@@ -16,7 +16,7 @@ def lambda_handler(event, context):
         # Guardar el archivo en memoria con el nombre yyy-mm-dd.html
         file_name = f'{fecha_actual}.html'
         s3 = boto3.client('s3')
-        s3.put_object(Bucket='zappa-taller', Key=file_name, Body=html)
+        s3.put_object(Bucket='taller-zappa', Key=file_name, Body=html)
 
         return {
             'statusCode': 200,
