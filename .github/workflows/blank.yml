@@ -61,11 +61,19 @@ jobs:
       #  run: |
       #   find . -name "*.py" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
       #   find . -name "*.txt" -type f -exec aws s3 cp {} s3://bigdatasubir7585/code/ \;
-      - name: enviroment
+      - name: Install dependencies
         run: |
-          python3.9 -m venv myenv
-          source myenv/bin/activate
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt 
+      - name: Debug AWS Credentials
+        run: |
+          echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
+          echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
+          echo "AWS_SESSION_TOKEN: $AWS_SESSION_TOKEN"
+
       - name: Deploy with Zappa
         run: |
+          python -m venv env
+          source env/bin/activate
           pip install zappa
           zappa update dev
