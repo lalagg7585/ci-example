@@ -12,8 +12,8 @@
         "role_name": "LabRole",
         "events": [
             {
-                "function": "tiempo.lambda_handle",
-                "expression": "cron(00 15 * * ? *)"  // Ejecutar todos los días a las 8:00 UTC
+                "function": "tiempo.lambda_handler",
+                "expression": "cron(16 15 * * ? *)"  // Ejecutar todos los días a las 8:00 UTC
             }
         ]
     }
