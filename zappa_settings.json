@@ -4,7 +4,7 @@
         "aws_region": "us-east-1",
         "project_name": "ci-example",
         "runtime": "python3.9",
-        "s3_bucket": "zappa-taller",
+        "s3_bucket": "taller-zappa",
         "apigateway_enabled": false,
         "manage_roles": false,
         "role_name": "robomaker_students",
@@ -13,7 +13,7 @@
         "events": [
             {
                 "function": "tiempo.lambda_handle",
-                "expression": "cron(30 04 * * ? *)"  // Ejecutar todos los días a las 8:00 UTC
+                "expression": "cron(40 0 * * ? *)"  // Ejecutar todos los días a las 8:00 UTC
             }
         ]
     }
